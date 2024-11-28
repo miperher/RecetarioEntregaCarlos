@@ -1,0 +1,56 @@
+<div class="container mx-auto p-4">
+  <h1 class="text-2xl font-bold mb-4">Editar Receta</h1>
+
+  <form *ngIf="recipe" (ngSubmit)="saveChanges()">
+    <label class="block mb-2 font-semibold">Título</label>
+    <input
+      type="text"
+      [(ngModel)]="recipe.strMeal"
+      class="block w-full p-2 border rounded mb-4"
+      placeholder="Título de la receta"
+      name="meal"
+    />
+
+    <label class="block mb-2 font-semibold">Categoría</label>
+    <input
+      type="text"
+      [(ngModel)]="recipe.strCategory"
+      class="block w-full p-2 border rounded mb-4"
+      placeholder="Categoría"
+      name="category"
+    />
+
+    <label class="block mb-2 font-semibold">Área</label>
+    <input
+      type="text"
+      [(ngModel)]="recipe.strArea"
+      class="block w-full p-2 border rounded mb-4"
+      placeholder="Área"
+      name="area"
+    />
+
+    <label class="block mb-2 font-semibold">Instrucciones</label>
+    <textarea
+      [(ngModel)]="recipe.strInstructions"
+      class="block w-full p-2 border rounded mb-4"
+      placeholder="Instrucciones"
+      name="instructions"
+    ></textarea>
+
+    <label class="block mb-2 font-semibold">Enlace de YouTube</label>
+    <input
+      type="text"
+      [(ngModel)]="recipe.strYoutube"
+      class="block w-full p-2 border rounded mb-4"
+      placeholder="Enlace al video de YouTube"
+      name="youtube"
+    />
+
+    <button
+      type="submit"
+      class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+    >
+      Guardar Cambios
+    </button>
+  </form>
+</div>
